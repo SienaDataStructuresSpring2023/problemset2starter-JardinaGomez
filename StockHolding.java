@@ -8,6 +8,7 @@ import java.text.DecimalFormat;
  */
 public class StockHolding
 {
+<<<<<<< HEAD
 
     private String Symbol;
     private String Name;
@@ -38,6 +39,21 @@ public class StockHolding
     public String getStockPricePerShare()
     {
         return StockPricePerShare;
+=======
+  
+    private String symbol;
+    private String name;
+    private int numShares;
+   
+    private double price;     
+    public StockHolding( String symbol, String name, int numShares, double price){ 
+        this.symbol = symbol;
+        this.name = name;
+        this.numShares = numShares;
+        this.price = price; 
+        
+        
+>>>>>>> eb622e36e0fa0e3028f2b4baff222a83d95ba4dc
     }
     
     
