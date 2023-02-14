@@ -9,14 +9,17 @@ import java.text.DecimalFormat;
 public class StockHolding
 {
   
-    private String Symbol;
-    private String Name;
-    private int numSharesHeld;
-    private double StockPricePerShare;
-    private static DecimalFormat price = new DecimalFormat("0.00");
-    
-    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
-        this.stock
+    private String symbol;
+    private String name;
+    private int numShares;
+   
+    private double price;     
+    public StockHolding( String symbol, String name, int numShares, double price){ 
+        this.symbol = symbol;
+        this.name = name;
+        this.numShares = numShares;
+        this.price = price; 
+        
         
     }
     
