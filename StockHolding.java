@@ -15,7 +15,7 @@ public class StockHolding
     private int numShares;
     private double price;
 
-    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
+    public StockHolding( String Symbol, String Name, int numSharesHeld, double price){ 
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
@@ -40,7 +40,7 @@ public class StockHolding
         return numShares;
     }
     
-    public double getStockPricePerShare()
+    public double getPrice()
     {
         return price;
   
