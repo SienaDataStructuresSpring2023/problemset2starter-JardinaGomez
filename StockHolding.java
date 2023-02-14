@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 /**
  * Write a description of class Asset here.
  *
@@ -7,10 +9,16 @@
 public class StockHolding
 {
   
-    private String stockSymbol;
-    private String stockName;
-    private String numSharesHeld;
-    private String currentStockPricePerShare;
+    private String Symbol;
+    private String Name;
+    private int numSharesHeld;
+    private double StockPricePerShare;
+    private static DecimalFormat price = new DecimalFormat("0.00");
+    
+    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
+        this.stock
+        
+    }
     
     
  @Override
