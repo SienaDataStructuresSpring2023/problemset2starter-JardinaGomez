@@ -8,52 +8,44 @@ import java.text.DecimalFormat;
  */
 public class StockHolding
 {
-<<<<<<< HEAD
 
-    private String Symbol;
-    private String Name;
-    private int numSharesHeld;
-    private double StockPricePerShare;
-    private static DecimalFormat price = new DecimalFormat("0.00");
 
-    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
-        this.stock
-
-    }
-    
-    public String getSymbol()
-    {
-        return Symbol;
-    }
-
-    public String getName()
-    {
-        return Name;
-    }
-    
-    public String getnumSharesHeld()
-    {
-        return numSharesHeld;
-    }
-    
-    public String getStockPricePerShare()
-    {
-        return StockPricePerShare;
-=======
-  
     private String symbol;
     private String name;
     private int numShares;
-   
-    private double price;     
-    public StockHolding( String symbol, String name, int numShares, double price){ 
+    private double price;
+
+    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
         this.price = price; 
         
         
->>>>>>> eb622e36e0fa0e3028f2b4baff222a83d95ba4dc
+
+    }
+    
+    public String getSymbol()
+    {
+        return symbol;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    
+    public int getNumShares()
+    {
+        return numShares;
+    }
+    
+    public double getStockPricePerShare()
+    {
+        return price;
+  
+   
+        
     }
     
     
