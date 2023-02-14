@@ -12,6 +12,8 @@ public class StockHolding
     private String numSharesHeld;
     private String currentStockPricePerShare;
     
+
+    
     
  @Override
     public String toString()
