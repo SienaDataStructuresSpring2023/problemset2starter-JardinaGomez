@@ -1,61 +1,60 @@
 import java.text.DecimalFormat;
-
 /**
  * Write a description of class Asset here.
  *
- * @author (Jardina Gomez and Maggie F)
+ * @author (Jardina Gomez and Maggie Frechette)
  * @version (a version number or a date)
  */
 public class StockHolding
 {
-<<<<<<< HEAD
-
-    private String Symbol;
-    private String Name;
-    private int numSharesHeld;
-    private double StockPricePerShare;
-    private static DecimalFormat price = new DecimalFormat("0.00");
-
-    public StockHolding( String Symbol, String Name, int numSharesHeld, double StockPricePerShare){ 
-        this.stock
-
-    }
-    
-    public String getSymbol()
-    {
-        return Symbol;
-    }
-
-    public String getName()
-    {
-        return Name;
-    }
-    
-    public String getnumSharesHeld()
-    {
-        return numSharesHeld;
-    }
-    
-    public String getStockPricePerShare()
-    {
-        return StockPricePerShare;
-=======
-  
     private String symbol;
     private String name;
     private int numShares;
-   
-    private double price;     
+    private double price;
+    
     public StockHolding( String symbol, String name, int numShares, double price){ 
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
         this.price = price; 
-        
-        
->>>>>>> eb622e36e0fa0e3028f2b4baff222a83d95ba4dc
     }
     
+    public String getSymbol()
+    {
+        return symbol;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    
+    public int getnumShares()
+    {
+        return numShares;
+    }
+    
+    public double getPrice()
+    {
+        return price;
+    }
+    
+    public void buyShares(int numberOfShares, double pricePerShare)
+    {
+        numShares = numberOfShares;
+        price = pricePerShare;
+    }
+    
+    public double sellShares(int numSharesToSell)
+    {
+        double profit = 0.0;
+        if(numSharesToSell <= numShares)
+        {
+            numShares = numShares - numSharesToSell;
+            profit = numSharesToSell*price;
+        }
+        return profit;
+    }
     
     @Override
     public String toString()
