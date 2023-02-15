@@ -7,16 +7,55 @@ import java.text.DecimalFormat;
  */
 public class StockHolding
 {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6db6399dd19c86be859f1e424bc0c04ed2d5361a
     private String symbol;
     private String name;
     private int numShares;
     private double price;
+<<<<<<< HEAD
     
     public StockHolding( String symbol, String name, int numShares, double price){ 
+=======
+
+    public StockHolding( String Symbol, String Name, int numSharesHeld, double price){ 
+>>>>>>> 6db6399dd19c86be859f1e424bc0c04ed2d5361a
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
         this.price = price; 
+<<<<<<< HEAD
+=======
+        
+        
+
+    }
+    
+    public String getSymbol()
+    {
+        return symbol;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    
+    public int getNumShares()
+    {
+        return numShares;
+    }
+    
+    public double getPrice()
+    {
+        return price;
+  
+   
+        
+>>>>>>> 6db6399dd19c86be859f1e424bc0c04ed2d5361a
     }
     
     public String getSymbol()
