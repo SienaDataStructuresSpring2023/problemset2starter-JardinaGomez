@@ -11,7 +11,7 @@ public class StockHolding
     private String name;
     private int numShares;
     private double price;
- 
+    
     public StockHolding(String symbol, String name, int numShares, double price){ 
         this.symbol = symbol;
         this.name = name;
