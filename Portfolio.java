@@ -24,12 +24,10 @@ public class Portfolio{
 
     public double getLifetimeInvestment(){
         return lifetimeInvestment;
-
     }
 
     public double getLifetimePayout(){
         return lifetimePayout;
-
     }
 
     /**
@@ -53,24 +51,58 @@ public class Portfolio{
      * This method takes the stock symbol, name of stock, number of shares to
      * buy and the current price per share as input.
      */
-    public double buyStock( String symbol, String stockName, int numShares, double price ){
-        int i= 0; 
-        int index = stocks.indexOf(symbol);
-        if( index != -1 ) {
-
+    public double buyStock( String symbol, String stockName, int numShares, double price )
+    {
+        int found = getIndex(symbol);
+        StockHolding sh = new StockHolding (symbol,stockName, numShares, price);
+        double cost = 0.0;
+        if(found > -1)
+        {
+            stocks.get(found).buyShares(numShares, price);
+            cost = numShares * price;
+            lifetimeInvestment += cost;
         }
+        
+        else
+        {
+            stocks.add(sh);
+        }
+        
+        return cost;
     }
 
     public double sellStock (String symbol, int numShares)
     {
-        int index = stocks.indexOf(symbol);
-
+        int index = getIndex(symbol);
+        double profit = 0.0;
         if(index != -1)
         {
-            stocks.sellShares(numShares);
+            profit = stocks.get(index).sellShares(numShares);
+            if(stocks.get(index).getNumShares()==0)
+            {
+                stocks.remove(index);
+            }
         }
 
-        return -1;
+        lifetimePayout += profit;
+        
+
+        return profit;
+    }
+    
+    public double getCurrentValue()
+    {
+        
+        int index = 0;
+        double value = 0.0;
+        for(StockHolding s: stocks)
+        {
+            value += stocks.get(index).getNumShares() * stocks.get(index).getPrice();
+            index++;
+        }
+        
+        return value;
+
     }
 
     /**
