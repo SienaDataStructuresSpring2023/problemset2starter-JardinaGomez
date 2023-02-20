@@ -32,7 +32,6 @@ public class Portfolio{
 
     }
 
-    
     /**
      * 
      */
@@ -49,8 +48,8 @@ public class Portfolio{
         }
         return var; 
     }
-    
- /**
+
+    /**
      * This method takes the stock symbol, name of stock, number of shares to
      * buy and the current price per share as input.
      */
@@ -71,7 +70,6 @@ public class Portfolio{
             stocks.sellShares(numShares);
         }
 
-        
         return -1;
     }
 
