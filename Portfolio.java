@@ -39,19 +39,21 @@ public class Portfolio{
      */
     private int getIndex( String symbol ) {
         int i = 0; 
-        int index = stocks.indexOf(symbol); 
+        int index = stocks.indexOf(symbol);
+        int var = -1;
         if (index != -1 && i < stocks.size() ) {
         
-            if( stocks.get(index).equals(stocks.get(getSymbol()))){
-                return index;
+            if( stocks.get(index).equals(symbol)){
+                var = index;
             }
             else {
             i++;
             }
             
         }else {
-            return -1;
-        }     
+            var = -1;
+        } 
+        return var; 
     
     }
     
