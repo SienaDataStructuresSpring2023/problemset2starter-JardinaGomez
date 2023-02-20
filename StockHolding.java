@@ -1,4 +1,4 @@
-import java.text.DecimalFormat;
+//import java.text.DecimalFormat;
 /**
  * Write a description of class Asset here.
  *
@@ -11,7 +11,7 @@ public class StockHolding
     private String name;
     private int numShares;
     private double price;
-    private double total;
+   //private double total;
     
     public StockHolding(String symbol, String name, int numShares, double price){ 
         this.symbol = symbol;
@@ -42,7 +42,7 @@ public class StockHolding
 
     public void buyShares(int numberOfShares, double pricePerShare)
     {
-        numShares = numberOfShares;
+        numShares += numberOfShares;
         price = pricePerShare;
     }
 
