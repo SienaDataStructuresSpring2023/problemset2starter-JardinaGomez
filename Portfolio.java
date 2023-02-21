@@ -14,6 +14,9 @@ public class Portfolio{
 
     //constructor
     /**
+     * Constructs the ArrayList of StockHolding objects to represent a portfolio that contains the number of stocks bought or sold
+     * and initializes lifetimeInvestment, sum of all the stock purchases made, and lifetimePayout,sum of all the stock purchases 
+     * sold,to 0. 
      * 
      */
     public Portfolio( ){
@@ -22,15 +25,30 @@ public class Portfolio{
         lifetimePayout = 0.0;
     }
 
+    /**
+     * Returns the lifetimeInvestment of the portfolio.
+     * 
+     * @return The lifetimeInvestment of the portfolio
+     */
     public double getLifetimeInvestment(){
         return lifetimeInvestment;
     }
 
+    /**
+     * Returns the lifetimePayout of the portfolio 
+     * 
+     * @return The lifetimePayout of the portfolio 
+     */
     public double getLifetimePayout(){
         return lifetimePayout;
     }
 
     /**
+     * This method takes as input the stock symbol and returns the index of the stock in stocks that has the same stock symbol as
+     * the input. Returns -1, if no stock was found in stocks .
+     * 
+     * @return getIndex The index of the stock in stocks that has the same stock symbol as input or -1 if no stock was not found
+     * @param symbol The stock symbol to search for in stocks
      * 
      */
     private int getIndex(String symbol) {
@@ -48,8 +66,8 @@ public class Portfolio{
     }
 
     /**
-     * This method takes the stock symbol, name of stock, number of shares to
-     * buy and the current price per share as input.
+     * This method takes as input the stock symbol, name of stock, number of shares to
+     * buy and the current price per share. If index of input symbol is in stocks, input numShares 
      */
     public double buyStock( String symbol, String stockName, int numShares, double price )
     {
