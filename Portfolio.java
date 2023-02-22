@@ -80,15 +80,19 @@ public class Portfolio{
             cost = numShares * price;
             lifetimeInvestment += cost;
         }
-        
+
         else
         {
             stocks.add(sh);
         }
-        
+
         return cost;
     }
 
+    /**
+     * This method takes as input stock sybol and the number of shares to sell.
+     * 
+     */
     public double sellStock (String symbol, int numShares)
     {
         int index = getIndex(symbol);
@@ -103,14 +107,13 @@ public class Portfolio{
         }
 
         lifetimePayout += profit;
-        
 
         return profit;
     }
-    
+
     public double getCurrentValue()
     {
-        
+
         int index = 0;
         double value = 0.0;
         for(StockHolding s: stocks)
@@ -118,7 +121,7 @@ public class Portfolio{
             value += stocks.get(index).getNumShares() * stocks.get(index).getPrice();
             index++;
         }
-        
+
         return value;
 
     }
