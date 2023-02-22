@@ -11,7 +11,7 @@ public class StockHolding
     private String name;
     private int numShares;
     private double price;
-    
+
     /**Constructs a stock holding with inputted stock symbol, stock name, number of shares to add, and the cuurent price per 
      * share.
      * 
@@ -34,7 +34,7 @@ public class StockHolding
      */
     public String getSymbol()
     {
-       return symbol;
+        return symbol;
     }
 
     /**
@@ -67,7 +67,6 @@ public class StockHolding
         return price;
     }
 
-    
     /**
      * This method updates numShares with the input of the number of shares to buy updates price with the input PricePershare.   
      * 
