@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-
 /**
  * Write a description of class Portfolio here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Maggie Frechette and Jardina Gomez)
+ * @version (Spring 2023)
  */
 public class Portfolio{
 
@@ -67,28 +66,42 @@ public class Portfolio{
 
     /**
      * This method takes as input the stock symbol, name of stock, number of shares to
-     * buy and the current price per share. If index of input symbol is in stocks, input numShares 
+     * buy and the current price per share. 
+     * If index of input symbol is in stocks, a share will be purchased given numShares and price
+     * Else it will add the stock 
+     * Cost and LifetimeInvestment are updated 
+     * 
+     * @param String symbol the symbol of the stock to search for, String stockName the name of the stock, 
+     * int numShares the number of shares to be purchased, double price the price of each share
+     * 
+     * @return double cost; the cost of the number of shares times price per share
+     * 
      */
     public double buyStock( String symbol, String stockName, int numShares, double price )
     {
         int found = getIndex(symbol);
         StockHolding sh = new StockHolding (symbol,stockName, numShares, price);
         double cost = 0.0;
-        if(found > -1)
+        if(found != -1)
         {
             stocks.get(found).buyShares(numShares, price);
-            cost = numShares * price;
-            lifetimeInvestment += cost;
         }
         
         else
         {
             stocks.add(sh);
         }
+        cost = numShares * price;
+        lifetimeInvestment +=cost;
         
         return cost;
     }
-
+    
+    /**
+     * @param String symbol 
+     * @return double profit Returns the profit made off of selling the shares by the given input
+     */
+    
     public double sellStock (String symbol, int numShares)
     {
         int index = getIndex(symbol);
