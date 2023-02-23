@@ -67,8 +67,11 @@ public class Portfolio{
     /**
      * This method takes as input the stock symbol, name of stock, number of shares to
      * buy and the current price per share. 
+     * 
      * If index of input symbol is in stocks, a share will be purchased given numShares and price
+     * 
      * Else it will add the stock 
+     * 
      * Cost and LifetimeInvestment are updated 
      * 
      * @param String symbol the symbol of the stock to search for, String stockName the name of the stock, 
@@ -99,7 +102,9 @@ public class Portfolio{
     
     /**
      * This method takes as input a String symbol and an int numShares of the stock looking to be sold
+     * 
      * If the stock is found, it is sold and if the stock number is not zero, it is removed from the portfolio
+     * 
      * LifetimePayout is updated accordingly 
      * 
      * @param String symbol symbol of stock that is being sold, int numShares number of shares that are being sold
@@ -125,6 +130,11 @@ public class Portfolio{
 
         return profit;
     }
+    /**
+     * This method takes no input and calculates and returns the total value of all of the stocks owned 
+     * 
+     * @return double value returns the total value of all of the stocks owned 
+     */
     
     public double getCurrentValue()
     {
