@@ -98,7 +98,12 @@ public class Portfolio{
     }
     
     /**
-     * @param String symbol 
+     * This method takes as input a String symbol and an int numShares of the stock looking to be sold
+     * If the stock is found, it is sold and if the stock number is not zero, it is removed from the portfolio
+     * LifetimePayout is updated accordingly 
+     * 
+     * @param String symbol symbol of stock that is being sold, int numShares number of shares that are being sold
+     * 
      * @return double profit Returns the profit made off of selling the shares by the given input
      */
     
