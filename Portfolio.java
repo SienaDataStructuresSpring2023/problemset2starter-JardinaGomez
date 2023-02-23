@@ -152,7 +152,9 @@ public class Portfolio{
     }
 
     /**
+     * Returns a string representation for the format of the portfolio text output
      * 
+     * @return a string representation for the format of the portfolio text output
      */
     @Override
 
