@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Portfolio here.
+ * The Portfolio class represents a portfolio of the buying and selling of stocks. 
  *
  * @author (Maggie Frechette and Jardina Gomez)
  * @version (Spring 2023)
