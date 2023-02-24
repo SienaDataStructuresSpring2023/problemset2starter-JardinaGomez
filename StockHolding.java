@@ -20,11 +20,12 @@ public class StockHolding
      * @param numShares The number of shares held
      * @param price The current price per share 
      */
-    public StockHolding(String symbol, String name, int numShares, double price){ 
+    public StockHolding( String symbol, String name, int numShares, double price ) { 
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
         this.price = price; 
+
     }
 
     /**
@@ -73,7 +74,7 @@ public class StockHolding
      * @param numberOfShares The number of shares to buy and update numShares by
      * @param pricePerShare The price per share to update price by
      */
-    public void buyShares(int numberOfShares, double pricePerShare)
+    public void buyShares( int numberOfShares, double pricePerShare )
     {
         numShares += numberOfShares;
         price = pricePerShare;
@@ -88,7 +89,7 @@ public class StockHolding
      * @param numSharesToSell The number of shares to sell
      * 
      */
-    public double sellShares(int numSharesToSell)
+    public double sellShares( int numSharesToSell )
     {
         double profit = 0.0;
         if(numSharesToSell <= numShares)
@@ -109,6 +110,6 @@ public class StockHolding
     {
         //DO NOT EDIT THIS METHOD.
         return String.format("%6s%25s%,10d  $%,12.2f  $%,12.2f%n", 
-            symbol, name, numShares, price, numShares * price); 
+            symbol, name, numShares, price, numShares * price ); 
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author (Maggie Frechette and Jardina Gomez)
  * @version (Spring 2023)
  */
-public class Portfolio{
+public class Portfolio {
 
     private ArrayList<StockHolding> stocks;
     private double lifetimeInvestment;
@@ -18,7 +18,7 @@ public class Portfolio{
      * sold,to 0. 
      * 
      */
-    public Portfolio( ){
+    public Portfolio( ) {
         stocks = new ArrayList<StockHolding>();
         lifetimeInvestment = 0.0;
         lifetimePayout = 0.0;
@@ -29,7 +29,8 @@ public class Portfolio{
      * 
      * @return The lifetimeInvestment of the portfolio
      */
-    public double getLifetimeInvestment(){
+    public double getLifetimeInvestment() 
+    {
         return lifetimeInvestment;
     }
 
@@ -38,7 +39,8 @@ public class Portfolio{
      * 
      * @return The lifetimePayout of the portfolio 
      */
-    public double getLifetimePayout(){
+    public double getLifetimePayout()
+    {
         return lifetimePayout;
     }
 
@@ -50,7 +52,8 @@ public class Portfolio{
      * @param symbol The stock symbol to search for in stocks
      * 
      */
-    private int getIndex(String symbol) {
+    private int getIndex( String symbol )
+    {
         int index = 0; 
         int var = -1;
         for(StockHolding s : stocks)
@@ -82,21 +85,21 @@ public class Portfolio{
      */
     public double buyStock( String symbol, String stockName, int numShares, double price )
     {
-        int found = getIndex(symbol);
-        StockHolding sh = new StockHolding (symbol,stockName, numShares, price);
+        int found = getIndex( symbol );
+        StockHolding sh = new StockHolding ( symbol,stockName, numShares, price );
         double cost = 0.0;
-        if(found != -1)
+        if( found != -1 )
         {
-            stocks.get(found).buyShares(numShares, price);
+            stocks.get( found ).buyShares( numShares, price );
         }
 
         else
         {
-            stocks.add(sh);
+            stocks.add( sh );
         }
 
         cost = numShares * price;
-        lifetimeInvestment +=cost;
+        lifetimeInvestment += cost;
         
         return cost;
     }
@@ -113,16 +116,16 @@ public class Portfolio{
      * @return double profit Returns the profit made off of selling the shares by the given input
      */
     
-    public double sellStock (String symbol, int numShares)
+    public double sellStock ( String symbol, int numShares )
     {
-        int index = getIndex(symbol);
+        int index = getIndex( symbol );
         double profit = 0.0;
-        if(index != -1)
+        if( index != -1 )
         {
-            profit = stocks.get(index).sellShares(numShares);
-            if(stocks.get(index).getNumShares()==0)
+            profit = stocks.get( index ).sellShares( numShares );
+            if( stocks.get( index ).getNumShares()==0 )
             {
-                stocks.remove(index);
+                stocks.remove( index );
             }
         }
 
@@ -142,9 +145,9 @@ public class Portfolio{
 
         int index = 0;
         double value = 0.0;
-        for(StockHolding s: stocks)
+        for( StockHolding s: stocks )
         {
-            value += stocks.get(index).getNumShares() * stocks.get(index).getPrice();
+            value += stocks.get( index ).getNumShares() * stocks.get( index ).getPrice();
             index++;
         }
 
