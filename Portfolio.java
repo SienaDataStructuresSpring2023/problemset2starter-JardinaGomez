@@ -94,16 +94,7 @@ public class Portfolio{
         {
             stocks.add(sh);
         }
-<<<<<<< HEAD
 
-        return cost;
-    }
-
-    /**
-     * This method takes as input stock sybol and the number of shares to sell.
-     * 
-     */
-=======
         cost = numShares * price;
         lifetimeInvestment +=cost;
         
@@ -122,7 +113,6 @@ public class Portfolio{
      * @return double profit Returns the profit made off of selling the shares by the given input
      */
     
->>>>>>> 9cc3a6138c933ecf1239405aaf974ff02050723a
     public double sellStock (String symbol, int numShares)
     {
         int index = getIndex(symbol);
@@ -140,16 +130,13 @@ public class Portfolio{
 
         return profit;
     }
-<<<<<<< HEAD
-
-=======
     /**
      * This method takes no input and calculates and returns the total value of all of the stocks owned 
      * 
      * @return double value returns the total value of all of the stocks owned 
      */
     
->>>>>>> 9cc3a6138c933ecf1239405aaf974ff02050723a
+
     public double getCurrentValue()
     {
 
