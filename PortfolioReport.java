@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
  * as described in the problem set 2 instructions.
  *
  * @author Maggie Frechette and Jardina Gomez 
- * @version Spring 2023
+ * @version Spring 2023 
  */
 public class PortfolioReport
 {
@@ -40,7 +40,7 @@ public class PortfolioReport
                 String numSharesSell = data[2];
                 p.sellStock(data[1],Integer.parseInt(numSharesSell.trim()));
             }
-
+        }
             System.out.print(p);
             System.out.println();
 
@@ -48,7 +48,7 @@ public class PortfolioReport
             System.out.println(String.format("      Current Value:  $%,15.2f", p.getCurrentValue()));
             System.out.println(String.format("Lifetime Investment:  $%,15.2f",p.getLifetimeInvestment()));
             System.out.println(String.format("    Lifetime Payout:  $%,15.2f", p.getLifetimePayout()));
-        }
+        
 
     }
 }

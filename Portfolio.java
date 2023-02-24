@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-
 /**
- * Write a description of class Portfolio here.
+ * The Portfolio class represents a portfolio of the buying and selling of stocks. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Maggie Frechette and Jardina Gomez)
+ * @version (Spring 2023)
  */
 public class Portfolio{
 
@@ -67,24 +66,35 @@ public class Portfolio{
 
     /**
      * This method takes as input the stock symbol, name of stock, number of shares to
-     * buy and the current price per share. If index of input symbol is in stocks, input numShares 
+     * buy and the current price per share. 
+     * 
+     * If index of input symbol is in stocks, a share will be purchased given numShares and price
+     * 
+     * Else it will add the stock 
+     * 
+     * Cost and LifetimeInvestment are updated 
+     * 
+     * @param String symbol the symbol of the stock to search for, String stockName the name of the stock, 
+     * int numShares the number of shares to be purchased, double price the price of each share
+     * 
+     * @return double cost; the cost of the number of shares times price per share
+     * 
      */
     public double buyStock( String symbol, String stockName, int numShares, double price )
     {
         int found = getIndex(symbol);
         StockHolding sh = new StockHolding (symbol,stockName, numShares, price);
         double cost = 0.0;
-        if(found > -1)
+        if(found != -1)
         {
             stocks.get(found).buyShares(numShares, price);
-            cost = numShares * price;
-            lifetimeInvestment += cost;
         }
 
         else
         {
             stocks.add(sh);
         }
+<<<<<<< HEAD
 
         return cost;
     }
@@ -93,6 +103,26 @@ public class Portfolio{
      * This method takes as input stock sybol and the number of shares to sell.
      * 
      */
+=======
+        cost = numShares * price;
+        lifetimeInvestment +=cost;
+        
+        return cost;
+    }
+    
+    /**
+     * This method takes as input a String symbol and an int numShares of the stock looking to be sold
+     * 
+     * If the stock is found, it is sold and if the stock number is not zero, it is removed from the portfolio
+     * 
+     * LifetimePayout is updated accordingly 
+     * 
+     * @param String symbol symbol of stock that is being sold, int numShares number of shares that are being sold
+     * 
+     * @return double profit Returns the profit made off of selling the shares by the given input
+     */
+    
+>>>>>>> 9cc3a6138c933ecf1239405aaf974ff02050723a
     public double sellStock (String symbol, int numShares)
     {
         int index = getIndex(symbol);
@@ -110,7 +140,16 @@ public class Portfolio{
 
         return profit;
     }
+<<<<<<< HEAD
 
+=======
+    /**
+     * This method takes no input and calculates and returns the total value of all of the stocks owned 
+     * 
+     * @return double value returns the total value of all of the stocks owned 
+     */
+    
+>>>>>>> 9cc3a6138c933ecf1239405aaf974ff02050723a
     public double getCurrentValue()
     {
 
@@ -127,7 +166,9 @@ public class Portfolio{
     }
 
     /**
+     * Returns a string representation for the format of the portfolio text output
      * 
+     * @return a string representation for the format of the portfolio text output
      */
     @Override
 
